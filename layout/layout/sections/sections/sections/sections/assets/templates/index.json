@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "trending": {
+      "type": "trending-products"
+    }
+  },
+  "order": ["trending"]
+}
