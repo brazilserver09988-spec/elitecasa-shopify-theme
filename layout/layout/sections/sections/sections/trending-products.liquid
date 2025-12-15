@@ -1,0 +1,14 @@
+<section style="padding:20px;">
+  <h2 style="text-align:center;">Trending</h2>
+
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:15px;">
+    {% for product in collections.all.products limit:6 %}
+    <div style="border:1px solid #eee;border-radius:12px;padding:10px;">
+      <img src="{{ product.featured_image | img_url: '400x' }}" style="width:100%;border-radius:10px;">
+      <h4>{{ product.title }}</h4>
+      <p>{{ product.price | money }}</p>
+      <button>Add to cart</button>
+    </div>
+    {% endfor %}
+  </div>
+</section>
