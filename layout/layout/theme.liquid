@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+  {{ content_for_header }}
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+</head>
+<body>
+
+{% section 'header' %}
+{% section 'sale-banner' %}
+
+{{ content_for_layout }}
+
+{% section 'footer' %}
+
+</body>
+</html>
